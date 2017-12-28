@@ -1,13 +1,25 @@
 #!/usr/bin/env bash
 
 ping -c 4 www.google.com
-apt-get install -y docker.io
-#apt-get update -y
-#apt-get upgrade -y
-#
-#mkdir /media/vbox
-#mount /home/vagrant/VBoxGuestAdditions_5.1.22.iso /media/vbox
-#/bin/bash /media/vbox/VBoxLinuxAdditions.run
+
+apt-get update -y
+apt-get upgrade -y
+sudo apt-get remove -y docker docker-engine docker.io
+sudo apt-get install -y \
+     apt-transport-https \
+     ca-certificates \
+     curl \
+     software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+apt-get update -y
+sudo apt-get install -y docker-ce
+sudo usermod -aG docker ${USER}
+systemctl restart docker
+systemctl enable docker
 
 # https://askubuntu.com/questions/792832/how-to-install-virtualbox-guest-additions-for-ubuntu-16-04
 #export DEBIAN_FRONTEND=noninteractive
