@@ -18,8 +18,8 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 apt-get update -y
 sudo apt-get install -y docker-ce
 sudo usermod -aG docker ${USER}
-systemctl restart docker
-systemctl enable docker
+sudo systemctl restart docker
+sudo systemctl enable docker
 
 # https://askubuntu.com/questions/792832/how-to-install-virtualbox-guest-additions-for-ubuntu-16-04
 #export DEBIAN_FRONTEND=noninteractive
