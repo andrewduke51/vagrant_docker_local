@@ -6,5 +6,6 @@
 *terraform.tfstate.backup
 *.terraform/
 .terraform
-
+*ubuntu-xenial*
+*.vagrant/
 

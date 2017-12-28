@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 ping -c 4 www.google.com
+apt-get install docker.io
 #apt-get update -y
 #apt-get upgrade -y
 #
