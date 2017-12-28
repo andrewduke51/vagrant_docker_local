@@ -8,4 +8,5 @@
 .terraform
 *ubuntu-xenial*
 *.vagrant/
+ubuntu-xenial-16.04*
 
