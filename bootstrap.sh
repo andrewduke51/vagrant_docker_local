@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ping -c 4 www.google.cpm
+ping -c 4 www.google.com
 #apt-get update -y
 #apt-get upgrade -y
 #

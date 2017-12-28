@@ -11,7 +11,7 @@ exit
 SCRIPT
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "phusion/ubuntu-14.04-amd64"
+  config.vm.box = "ubuntu/xenial64"
   config.vm.box_check_update = true
   config.vbguest.auto_update = true
   config.vm.define "docker-host"
@@ -19,9 +19,9 @@ Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.56.226"
   config.vm.hostname = "docker-host"
   config.vm.provision :shell, path: "bootstrap.sh"
-  config.vm.synced_folder "/Users/andrew.figaroa/Documents/docker/docker_test_app", "/home/vagrant/friendly_hello"
-  config.vm.synced_folder "/Users/andrew.figaroa/Documents/repos/Mpi.Go", "/home/vagrant/Mpi.Go"
-  config.vm.synced_folder "/Users/andrew.figaroa/Documents/repos/QA.Postman", "/home/vagrant/postman"
+  config.vm.synced_folder "/Users/andrew.figaroa/Documents/docker/docker_test_app", "/home/ubuntu/friendly_hello"
+  config.vm.synced_folder "/Users/andrew.figaroa/Documents/repos/Mpi.Go", "/home/ubuntu/Mpi.Go"
+  config.vm.synced_folder "/Users/andrew.figaroa/Documents/repos/QA.Postman", "/home/ubuntu/postman"
 
 
   Vagrant::Config.run do |config|
