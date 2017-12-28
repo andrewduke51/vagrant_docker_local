@@ -1,5 +1,6 @@
 # https://docs.docker.com/get-started/part2/#apppy
 # Use an official Python runtime as a parent image
+# docker run -p 4000:80 friendlyhello
 FROM python:2.7-slim
 
 # Set the working directory to /app
@@ -17,8 +18,8 @@ EXPOSE 80
 # Define environment variable
 ENV NAME World
 
-RUN apt-get update && apt-get install -y ip-utils-ping net-tools
-CMD ping -c www.google.com
+RUN apt-get update && apt-get install -y iputils-ping net-tools
+CMD ping -c 46 8.8.8.8
 
 # Run app.py when the container launches
-CMD ["python", "app.py"]
+# CMD ["python", "app.py"]
