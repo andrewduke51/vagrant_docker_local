@@ -11,7 +11,7 @@ exit
 SCRIPT
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "saj/docker-host"
+  config.vm.box = "phusion/ubuntu-14.04-amd64"
   config.vm.box_check_update = true
   config.vbguest.auto_update = true
   config.vm.define "docker-host"
