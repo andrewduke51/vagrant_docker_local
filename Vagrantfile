@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.56.226"
   config.vm.hostname = "docker-host"
   config.vm.provision :shell, path: "bootstrap.sh"
-  config.vm.synced_folder "/Users/andrew.figaroa/Documents/docker/docker_test_app", "/home/ubuntu/friendly_hello"
+  config.vm.synced_folder "/Users/andrew.figaroa/Documents/personal/docker/docker_test_app", "/home/ubuntu/friendly_hello"
   config.vm.synced_folder "/Users/andrew.figaroa/Documents/repos/Mpi.Go", "/home/ubuntu/Mpi.Go"
   config.vm.synced_folder "/Users/andrew.figaroa/Documents/repos/QA.Postman", "/home/ubuntu/postman"
 
