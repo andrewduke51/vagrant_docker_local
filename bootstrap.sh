@@ -4,6 +4,7 @@ ping -c 4 www.google.com
 
 apt-get update -y
 apt-get upgrade -y
+apt-get -y install awscli
 sudo apt-get remove -y docker docker-engine docker.io
 sudo apt-get install -y \
      apt-transport-https \
