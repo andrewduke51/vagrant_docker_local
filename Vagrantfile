@@ -7,6 +7,7 @@ $script = <<SCRIPT
 apt-get update -y
 apt-get upgrade -y
 apt-get autoremove
+
 exit
 SCRIPT
 
@@ -22,8 +23,6 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "/Users/andrew.figaroa/.aws", "/home/ubuntu/.aws"
   config.vm.synced_folder "/Users/andrew.figaroa/Documents/repos/QA.Postman", "/home/ubuntu/postman"
   config.vm.synced_folder "/Users/andrew.figaroa/Documents/personal/docker/docker_test_app", "/home/ubuntu/friendly_hello"
-  config.vm.synced_folder "/Users/andrew.figaroa/Documents/repos/Api.Marketplace.TaxCredit.Screening", "/home/ubuntu/vish"
-
 
   Vagrant::Config.run do |config|
     config.vbguest.iso_path = "#{ENV['HOME']}/Users/andrew.figaroa/Documents/docker/VBoxGuestAdditions_5.1.22.iso"
