@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "docker-host"
   config.vm.provision :shell, path: "bootstrap.sh"
   config.vm.synced_folder "/Users/andrew.figaroa/.aws", "/home/ubuntu/.aws"
-  config.vm.synced_folder "/Users/andrew.figaroa/Documents/repos/QA.Postman", "/home/ubuntu/postman"
+  config.vm.synced_folder "/Users/andrew.figaroa/Documents/repos/devops.infra.served_proxy", "/home/ubuntu/served_proxy"
   config.vm.synced_folder "/Users/andrew.figaroa/Documents/personal/docker/docker_test_app", "/home/ubuntu/friendly_hello"
 
   Vagrant::Config.run do |config|
